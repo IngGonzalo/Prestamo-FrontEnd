@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+  .primary-btn{
+    @apply bg-primary text-white font-semibold py-3 px-5 rou shadow-[0px_10px_14px_-7px_#de0029] hover:!sca duration-300;
+  }
+  
+}
+@layer utilities{
+  .drop-shadow{
+    filter: drop-shadow(-6px 8px 15px rgba(0,0,0,0.2));
+  }
+}
+
+
+.sidemenu {
+  @apply absolute h-screen flex flex-col -left-[100%] md:relative md:left-0 bg-stone-950 max-w-72 w-full py-10 px-8
+}
+
+.sidemenu__logo {
+  @apply font-extrabold text-xl mb-10 flex items-center
+}
+
+.sidemenu__link {
+  @apply flex gap-4 items-center p-3 rounded-lg font-semibold transition-colors duration-1000 hover:bg-gradient-to-tr from-primary to-green-300
+}
+
+.sidemenu__link span {
+  @apply text-primary text-xl
+}
+
+.sidemenu__link:hover span {
+  @apply text-white
+}
+
+.sidemenu__link--active {
+  @apply bg-gradient-to-br from-primary to-green-300
+}
+
+.sidemenu__link--active span {
+  @apply text-white
+}
